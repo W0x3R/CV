@@ -1,59 +1,72 @@
+.header__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: clamp(8px, 2.8vw, 15px);
+}
 
-.header{
-  background: linear-gradient(135deg, #CCCCCE, #E8E8E8);
-  .header__wrapper{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px 15px;
-    .header__picture-wrapper{
-      .header__picture{
-        border-radius: 5%;
-        box-shadow:5px 5px 5px 3px;
-        width:clamp(155px,38vw,280px)
-      }
-    }
-    .header__about-me{
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
-      text-align: center;
-      gap:clamp(5px,4.1vw,20px);
-      .header__name-title{
-        font-size: clamp(22px, 5.3vw, 48px);
-        margin-bottom: 5px;
-      }
-      .header__relocate-title {
-        font-size: clamp(14px, 4.3vw, 34px);
-        margin-bottom: 5px;
-      }
-      .header__profession-title{
-        font-size: clamp(14px, 4.2vw, 32px);
-        margin-bottom: 5px;
-        font-weight: 400;
-        font-style: italic;
-      }
-      .header__contacts-title{
-        font-size: clamp(8px, 3.5vw, 26px);
-        margin-bottom: 5px;
-        font-weight: 400;
-        font-style: italic;
-      }
-      .header__svg-block{
-        display: flex;
-        gap:clamp(5px,3.8vw,60px);
-        .header__svg-block-icon{
-          width: clamp(28px, 6.8vw, 50px);
-          height: clamp(28px, 6.8vw, 50px);
-          transition: all .5s ease;
-          &:hover{
-            fill:cadetblue
-          }
-        }
-      }
-    }
+.header__inner:not(:last-of-type) {
+  margin: 0 15px 15px 0;
+
+  @media screen and (max-width: 555px) {
+    margin-right: 0;
   }
 }
 
+.header__picture {
+  width: clamp(150px, 37vw, 280px);
+  border-radius: 5%;
+  box-shadow: 5px 5px 5px 3px;
+}
+
+.header__about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: clamp(3px, 1vw, 20px);
+  text-align: center;
+}
+
+.header__name-title {
+  margin-bottom: 5px;
+  font-size: clamp(16px, 5.3vw, 48px);
+}
+
+.header__relocate-title {
+  margin-bottom: 5px;
+  font-size: clamp(12px, 3.3vw, 34px);
+}
+
+.header__profession-title {
+  margin-bottom: 5px;
+  font-size: clamp(13px, 4.2vw, 32px);
+  font-weight: 400;
+  font-style: italic;
+}
+
+.header__contacts-title {
+  margin-bottom: 5px;
+  font-size: clamp(8px, 3.5vw, 26px);
+  font-weight: 400;
+  font-style: italic;
+}
+
+.header__svg-block {
+  display: flex;
+  gap: clamp(5px, 3.8vw, 60px);
+}
+
+.header__svg-block-icon {
+  width: clamp(28px, 6.8vw, 50px);
+  height: clamp(28px, 6.8vw, 50px);
+}
+
+.header__svg-blocks-link {
+  transition: 0.5s ease-in-out;
+
+  &:hover {
+    fill: cadetblue;
+  }
+}

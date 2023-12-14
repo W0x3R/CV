@@ -8,7 +8,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
- html {
+html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -22,7 +22,9 @@
 
 body {
   margin: 0;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  background: linear-gradient(273deg, #ccccce, #e8e8e8);
+  letter-spacing: 1px;
 }
 
 /**
@@ -76,6 +78,8 @@ pre {
 
 a {
   background-color: transparent;
+  text-decoration: none;
+  color: inherit;
 }
 
 /**
@@ -175,7 +179,8 @@ textarea {
  */
 
 button,
-input { /* 1 */
+input {
+  /* 1 */
   overflow: visible;
 }
 
@@ -185,7 +190,8 @@ input { /* 1 */
  */
 
 button,
-select { /* 1 */
+select {
+  /* 1 */
   text-transform: none;
 }
 
@@ -350,7 +356,7 @@ template {
 }
 
 html {
-  box-sizing: border-box;;
+  box-sizing: border-box;
 }
 *,
 *::before,
@@ -372,6 +378,11 @@ svg {
   margin: 0 auto;
 }
 
-h1,h2,h3,h4 {
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
   margin: 0;
 }

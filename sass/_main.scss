@@ -1,0 +1,173 @@
+.main__wrapper {
+  padding: clamp(8px, 2.8vw, 15px);
+}
+
+.main__about-me {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: clamp(10px, 2.8vw, 15px);
+}
+
+.main__title {
+  font-size: clamp(16px, 4vw, 32px);
+  margin-bottom: clamp(8px, 2.8vw, 15px);
+  align-self: center;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+.main__about-me-text {
+  font-size: clamp(12px, 3vw, 18px);
+  line-height: normal;
+}
+
+.main__skills-courses {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.main__skills {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.main__skills-courses-wrapper:not(:last-child) {
+  margin-right: 20px;
+  margin-bottom: 15px;
+
+  @media screen and (max-width: 720px) {
+    margin-right: 0;
+  }
+}
+
+.main__skills-meter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: clamp(10px, 2vw, 20px);
+  font-weight: bold;
+
+  .main__meter {
+    width: 230px;
+    height: 30px;
+
+    &::-webkit-meter-optimum-value {
+      background-image: linear-gradient(90deg, cadetblue 55%, cadetblue 45%);
+    }
+  }
+}
+
+.main__courses {
+  flex-basis: 365px;
+
+  .main__list {
+    list-style-type: disc;
+    list-style-position: inside;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    font-size: clamp(12px, 2.8vw, 16px);
+
+    & .main__courses-item::marker {
+      color: #5f9ea0;
+      font-size: 15px;
+    }
+  }
+
+  .main__list .main__courses-item:not(:last-of-type) {
+    margin-bottom: 10px;
+    @media screen and (max-width: 720px) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.main__education-job {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+
+  .main__list {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    font-size: clamp(12px, 2.8vw, 16px);
+
+    .main__education-job-item:first-of-type {
+      list-style-type: disc;
+      list-style-position: inside;
+
+      &::marker {
+        color: #5f9ea0;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+.main__education-job-wrapper {
+  flex-basis: 365px;
+}
+
+.main__education-job-wrapper:not(:last-child) {
+  margin-right: 20px;
+  margin-bottom: 15px;
+
+  @media screen and (max-width: 780px) {
+    margin-right: 0;
+  }
+}
+
+.main__education {
+  display: flex;
+  flex-direction: column;
+
+  .main__list:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.main__education-language-list {
+  list-style-type: disc;
+  list-style-position: inside;
+  &::marker {
+    color: #5f9ea0;
+    font-size: 15px;
+  }
+  &:not(:last-of-type) {
+    margin-bottom: 10px;
+    @media screen and (max-width: 780px) {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.main__job {
+  .main__list:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+}
+
+.main__courses-certificate {
+  width: clamp(28px, 6.8vw, 50px);
+  height: clamp(28px, 6.8vw, 50px);
+}
+
+.main__courses-certificate-link {
+  transition: 0.5s ease-in-out;
+
+  &:hover {
+    fill: cadetblue;
+  }
+}
+
+.main__courses_certificate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
